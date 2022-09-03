@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Bulb</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .img1{
+            width:30%;
+            display: block;
+            margin-top:50px;
+            margin-left:450px;
+        }
+        .center{
+            padding:10px;
+            background-color: chocolate;
+            margin-top:10px;
+            margin-left:600px;
+            cursor: pointer;
+        }
+        h1{
+            color:white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">Bulb On/Off Demo</h1>
+    <img id="btnI" src="https://th.bing.com/th/id/OIP.W50JVBRGdZVIM3msL3CZUQAAAA?w=150&h=150&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="" class="img1" >
+    <button id="togglebtn" class="center">Turn On</button>
+    <script>
+        let btn=document.getElementById('togglebtn')
+        let btnI=document.getElementById('btnI')
+        let h1=document.getElementById('h1')
+        btn.addEventListener('click',togglebulb)
+        function togglebulb(e)
+        {
+            if(btn.textContent.includes('On')){
+                btnI.src="https://photos.gograph.com/thumbs/CSP/CSP991/k12478208.jpg";
+                btn.textContent='Turn OFF'
+                
+            }
+            else{
+                btnI.src="https://th.bing.com/th/id/OIP.W50JVBRGdZVIM3msL3CZUQAAAA?w=150&h=150&c=7&r=0&o=5&dpr=1.5&pid=1.7";
+                btn.textContent='Turn On'
+            }
+            console.log(e);
+        }
+        togglebulb();
+    </script>
+</body>
+</html>
